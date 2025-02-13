@@ -1,6 +1,75 @@
-@import "vars";
 @import "reset";
+@import "vars";
 @import "fonts";
 @import "global";
-
 @import "media";
+
+.header {
+  color: $white-color;
+  @extend %ubuntu-500;
+  position: relative;
+  text-transform: uppercase;
+  &__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 47px;
+    background-color: transparent;
+  }
+  .container {
+    display: flex;
+  }
+  .logo {
+    margin-right: 11px;
+  }
+  &__drone {
+    margin-right: auto;
+  }
+  .contacts {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  height: 100vh;
+  @extend %img-style;
+  color: $white-color;
+  .container {
+    height: calc(100vh - 74px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    @extend %ubuntu-700;
+    font-size: 96px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  &__drone {
+    @extend %img-style;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  &__description {
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto 35px;
+  }
+  &__list {
+    display: flex;
+    margin: 0 auto;
+    gap: 50px;
+    width: fit-content;
+  }
+  &__link-img {
+    @extend %img-style;
+    width: 40px;
+    height: 40px;
+  }
+}

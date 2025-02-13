@@ -1,0 +1,31 @@
+$white-color: #ffffff;
+
+%ubuntu-500 {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+%ubuntu-700 {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%ubuntu-300 {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%ubuntu-400 {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%img-style {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
