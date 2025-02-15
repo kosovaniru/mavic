@@ -1,10 +1,12 @@
 @import "reset";
 @import "vars";
 @import "fonts";
+@import "libs";
 @import "global";
 @import "media";
 
 .header {
+  z-index: 1;
   color: $white-color;
   @extend %ubuntu-500;
   position: relative;
@@ -19,17 +21,32 @@
   }
   .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
   }
   .logo {
     margin-right: 11px;
   }
-  &__drone {
-    margin-right: auto;
+  &__list {
+    display: flex;
+    gap: 20px;
   }
   .contacts {
     display: flex;
     gap: 30px;
     margin: 0 auto;
+  }
+  &__info {
+    @extend %ubuntu-700;
+    font-size: 16px;
+  }
+  &__buy {
+    color: $white-color;
+    padding: 7px 28px;
+    border-radius: 3px;
+    border: 1px solid $white-color;
+    margin-right: 8px;
   }
 }
 
@@ -43,6 +60,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  &__box {
+    margin: auto 0;
   }
   &__title {
     @extend %ubuntu-700;
@@ -60,16 +81,106 @@
     max-width: 324px;
     width: 100%;
     margin: 0 auto 35px;
+    text-align: center;
   }
-  &__list {
-    display: flex;
+  .contacts {
     margin: 0 auto;
-    gap: 50px;
+    width: fit-content;
+    margin-bottom: 13px;
+  }
+}
+
+.about {
+  position: relative;
+  z-index: -2;
+  .section-title {
+    margin-bottom: 55px;
+  }
+  &__content {
+    padding-left: 30px;
+    max-width: 440px;
+    width: 100%;
+  }
+  &__text:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  &__slider-box {
+    position: absolute;
+    right: 0;
+    top: 40%;
     width: fit-content;
   }
-  &__link-img {
+  &__slider-text {
+    @extend %ubuntu-500;
+    max-width: 281px;
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+    position: absolute;
+    z-index: 1;
+    left: -253px;
+    bottom: 59px;
+  }
+  &__slider {
+    width: fit-content;
+    position: relative;
+    &::after {
+      content: "";
+      width: 564px;
+      height: 280px;
+      position: absolute;
+      z-index: 0;
+      top: 10px;
+      left: 17px;
+      z-index: -1;
+      border: 4px solid $white-color;
+    }
+  }
+  .slick-slider {
+    max-width: 640px;
+    width: 100%;
+  }
+  &__item {
+    width: fit-content;
+  }
+  &__img {
+    max-width: 560px;
+    height: auto;
+    width: 100%;
     @extend %img-style;
-    width: 40px;
-    height: 40px;
+  }
+}
+
+.benefits {
+  z-index: -2;
+  .section-title {
+    margin-bottom: 55px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__img-box {
+    margin-right: 32px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      border: 2px solid $white-color;
+      width: 195px;
+      height: 130px;
+      z-index: -1;
+      top: -10px;
+      left: 10px;
+    }
+  }
+  .section-subtitle {
+    max-width: 205px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  &__text {
+    max-width: 300px;
+    width: 100%;
   }
 }
