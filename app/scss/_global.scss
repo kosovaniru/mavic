@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -15,18 +16,19 @@ body {
   line-height: 1.5;
   color: $white-color;
   position: relative;
+  overflow-x: hidden;
 }
 
 .page-section {
   min-height: 100vh;
   background-image: url(../images/main-bg.jpg);
   @extend %img-style;
-  width: 100%;
   position: relative;
+  padding: 74px 0 50px;
 }
 
 .container {
-  max-width: 1195px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 150px 15px 50px;
 }
@@ -47,19 +49,25 @@ body {
 .section-title {
   @extend %ubuntu-400;
   font-size: 44px;
+  line-height: 53px;
+  padding-left: 25px;
 }
 
 .section-subtitle {
   @extend %ubuntu-700;
   font-size: 21px;
+  margin-bottom: 10px;
 }
 
 .scroll {
-  margin: 0 auto;
   width: fit-content;
-  left: -50%;
-  transform: translateX(50%);
-  bottom: 40px;
+  padding: 13px 0 40px;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  right: 0;
+  left: 50%;
+  bottom: 0;
 }
 
 .contacts {
@@ -76,4 +84,9 @@ body {
     width: 40px;
     height: 40px;
   }
+}
+
+.link-style {
+  border-radius: 3px;
+  border: 1px solid $white-color;
 }
