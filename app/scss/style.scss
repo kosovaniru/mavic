@@ -16,7 +16,6 @@
     top: 30px;
     left: 0;
     right: 0;
-    padding-top: 47px;
     background-color: transparent;
   }
   .container {
@@ -55,9 +54,29 @@
 }
 
 .hero {
-  height: 100vh;
   @extend %img-style;
   color: $white-color;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: radial-gradient(
+      45.97% 102.87% at -45.97% 45.57%,
+      rgba(23, 26, 28, 0) 50.28%,
+      rgba(23, 26, 28, 0) 50.29%,
+      rgba(4, 5, 5, 0.82) 58.72%,
+      rgba(5, 5, 6, 0.79) 80.08%,
+      #000 87.89%
+    );
+    opacity: 0.4;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
   .container {
     margin: 0 auto;
     display: flex;
@@ -101,6 +120,10 @@
   .section-title {
     margin-bottom: 55px;
   }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
   &__content {
     padding-left: 30px;
     max-width: 440px;
@@ -110,9 +133,9 @@
     margin-bottom: 30px;
   }
   &__slider-box {
-    position: absolute;
-    right: 0;
-    top: 40%;
+    margin-top: 18%;
+    margin-right: 30px;
+    position: relative;
     width: fit-content;
   }
   &__slider-text {
@@ -129,20 +152,21 @@
   &__slider {
     width: fit-content;
     position: relative;
+    margin-right: 15px;
     &::after {
       content: "";
       width: 564px;
       height: 280px;
       position: absolute;
       z-index: 0;
-      top: 10px;
+      top: -15px;
       left: 17px;
       z-index: -1;
       border: 4px solid $white-color;
     }
   }
   .slick-slider {
-    max-width: 640px;
+    max-width: 560px;
     width: 100%;
   }
   &__item {
@@ -154,6 +178,34 @@
     width: 100%;
     @extend %img-style;
   }
+  &__btn {
+    width: 48px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    bottom: -48px;
+    right: 6px;
+    background-color: $white-color;
+    svg {
+      stroke: $black_btn-color;
+    }
+    &.slick-disabled {
+      background-color: $black_btn-color;
+      svg {
+        stroke: $white-color;
+      }
+    }
+  }
+  &__btn-left {
+    transform: rotate(90deg);
+    right: 66px;
+  }
+  &__btn-right {
+    transform: rotate(270deg);
+  }
 }
 
 .benefits {
@@ -161,9 +213,19 @@
   .section-title {
     margin-bottom: 55px;
   }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 100px;
+  }
+  &__num {
+    line-height: 41px;
+    font-size: 36px;
+    @extend %ubuntu-700;
   }
   &__img-box {
     margin-right: 32px;
