@@ -36,7 +36,7 @@
           </ul>
         </nav>
         <div class="header__info">
-          <button class="header__buy link-style" href="#">Купити</button>
+          <button class="header__buy link-style">Купити</button>
           <a class="header__tel" href="tel:8(050)5676767">8 (050) 567 67 67
             <span class="sr-only">Зателефонувати нам</span>
           </a>
@@ -45,7 +45,7 @@
     </div>
   </header>
   
-  <main class="main">
+  <main class="main" id="fullpage">
     <h1 class="sr-only">Квадрокоптер Dji Mavic 2 Pro із професійною камерою Hasselblad</h1>
     <section class="hero page-section" style="background-image: url(images/bg.jpg);">
       <div class="page-section__wrapper hero__wrapper">
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="scroll">
-        <a class="scroll__img" href="#about" alt="Іконка для гортання вниз">
+        <a class="scroll__img" href="#about">
           <img class="scroll__img" src="images/logo/arrow-down.svg" alt="Іконка для гортання вниз">
           <span class="sr-only">Стрілочка для скролу до наступної секції</span>
         </a>
@@ -226,7 +226,7 @@
               <h4 class="questions__subtitle">Які відмінності між Mavic 2 Pro та Mavic 2 Zoom?</h4>
               <p class="questions__text">У Mavic 2 покращено практично всі аспекти: камера, передача відеосигналу, польотний час, швидкість, рівень шуму, виявлення перешкод у кількох напрямках, інтелектуальні функції та унікальна функція Hyperlapse (гіперлапс).</p>
             </li>
-            <li class="questions__item">
+            <li class="questions__item questions__item--active">
               <h4 class="questions__subtitle">Чим Mavic 2 краще Mavic Pro?</h4>
               <p class="questions__text">У Mavic 2 покращено практично всі аспекти: камера, передача відеосигналу, польотний час, швидкість, рівень шуму, виявлення перешкод у кількох напрямках, інтелектуальні функції та унікальна функція Hyperlapse (гіперлапс).</p>
             </li>
@@ -239,7 +239,6 @@
               <p class="questions__text">У Mavic 2 покращено практично всі аспекти: камера, передача відеосигналу, польотний час, швидкість, рівень шуму, виявлення перешкод у кількох напрямках, інтелектуальні функції та унікальна функція Hyperlapse (гіперлапс).</p>
             </li>
           </ul>
-          <img class="questions__img" src="images/questions/questions-drone.png" alt="Фото іншого Mavic з помаранчевими лініями">
         </div>
         <div class="scroll">
           <a class="scroll__link" href="#footer">
@@ -249,67 +248,67 @@
         </div>
       </div>
     </section>
+    <footer id="footer" class="footer">
+      <section class="page-section">
+        <div class="page-section__wrapper">
+          <div class="container">
+            <h2 class="section-title">Залишились питання?</h2>
+            <div class="footer__inner">
+              <ul class="footer__contacts">
+                <li class="footer__items">
+                  <p class="section-subtitle">Київ</p>
+                  <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
+                  <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail">dgi.mavic2pro.kiev@dmail</a>
+                </li>
+                <li class="footer__items">
+                  <p class="section-subtitle">Київ</p>
+                  <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
+                  <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail">dgi.mavic2pro.kiev@dmail</a>
+                </li>
+                <li class="footer__items">
+                  <p class="section-subtitle">Київ</p>
+                  <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
+                  <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail">dgi.mavic2pro.kiev@dmail</a>
+                </li>
+              </ul>
+              <form class="footer__form" action="#">
+                <h3 class="section-subtitle">Лишились питання?</h3>
+                <p class="footer__form-text">Ми обов'язково зв'яжемося з вами протягом двох робочих днів</p>
+                <div class="footer__form-inputs">
+                  <input class="footer__form-input" type="text" placeholder="Ваше ім'я">
+                  <input class="footer__form-input" type="email" placeholder="Ваш e-mail">
+                </div>
+                <textarea class="footer__form-textarea" placeholder="Що вас цікавить?"></textarea>
+                <button class="footer__form-btn link-style" type="submit">Надіслати</button>
+              </form>
+              <ul class="contacts">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="#">
+                    <img class="contacts__link-img" src="images/logo/facebook.svg" alt="Фото лого Facebook">
+                    <span class="sr-only">Посилання на наш фейсбук</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="#">
+                    <img class="contacts__link-img" src="images/logo/youtube.svg" alt="Фото лого YouTube">
+                    <span class="sr-only">Посилання на наш ютуб</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="#">
+                    <img class="contacts__link-img" src="images/logo/instagram.svg" alt="Фото лого Instagram">
+                    <span class="sr-only">Посилання на наш інстаграм</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="footer__copy">© DJI, 2020</p>
+          </div>
+        </div>
+      </section>
+    </footer>
   </main>
 
-  <footer id="footer" class="footer">
-    <section class="page-section">
-      <div class="page-section__wrapper">
-        <div class="container">
-          <h2 class="section-title">Залишились питання?</h2>
-          <div class="footer__inner">
-            <ul class="footer__contacts">
-              <li class="footer__items">
-                <p class="section-subtitle">Київ</p>
-                <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
-                <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail" type="e-mail">dgi.mavic2pro.kiev@dmail</a>
-              </li>
-              <li class="footer__items">
-                <p class="section-subtitle">Київ</p>
-                <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
-                <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail" type="e-mail">dgi.mavic2pro.kiev@dmail</a>
-              </li>
-              <li class="footer__items">
-                <p class="section-subtitle">Київ</p>
-                <a class="footer__info" href="tel:+80505676767">+8(050)5676767</a>
-                <a class="footer__info" href="mailto:dgi.mavic2pro.kiev@dmail" type="e-mail">dgi.mavic2pro.kiev@dmail</a>
-              </li>
-            </ul>
-            <form class="footer__form" action="#">
-              <h3 class="section-subtitle">Лишились питання?</h3>
-              <p class="footer__form-text">Ми обов'язково зв'яжемося з вами протягом двох робочих днів</p>
-              <div class="footer__form-inputs">
-                <input class="footer__form-input" type="text" placeholder="Ваше ім'я">
-                <input class="footer__form-input" type="email" placeholder="Ваш e-mail">
-              </div>
-              <textarea class="footer__form-textarea" placeholder="Що вас цікавить?"></textarea>
-              <button class="footer__form-btn link-style" type="submit">Надіслати</button>
-            </form>
-            <ul class="contacts">
-              <li class="hero__item">
-                <a class="hero__link" href="#">
-                  <img class="hero__link-img" src="images/logo/facebook.svg" alt="Фото лого Facebook">
-                  <span class="sr-only">Посилання на наш фейсбук</span>
-                </a>
-              </li>
-              <li class="hero__item">
-                <a class="hero__link" href="#">
-                  <img class="hero__link-img" src="images/logo/youtube.svg" alt="Фото лого YouTube">
-                  <span class="sr-only">Посилання на наш ютуб</span>
-                </a>
-              </li>
-              <li class="hero__item">
-                <a class="hero__link" href="#">
-                  <img class="hero__link-img" src="images/logo/instagram.svg" alt="Фото лого Instagram">
-                  <span class="sr-only">Посилання на наш інстаграм</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <p class="footer__copy">© DJI, 2020</p>
-        </div>
-      </div>
-    </section>
-  </footer>
 
   <script src="js/main.min.js"></script>
 </body>

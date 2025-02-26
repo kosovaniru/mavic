@@ -1,5 +1,6 @@
 $white-color: #ffffff;
 $black_btn-color: #1c1c1c;
+$black-color: #000000;
 
 %ubuntu-500 {
   font-family: "Ubuntu", serif;
@@ -30,3 +31,10 @@ $black_btn-color: #1c1c1c;
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+$breakpoints: (
+  "desktop": 1230px,
+  "tablet-2": 992px,
+  "tablet": 768px,
+  "phone": 560px,
+);
