@@ -24,9 +24,51 @@
     justify-content: space-between;
     align-items: center;
     min-height: 30px;
+    position: relative;
   }
   .logo {
     margin-right: 11px;
+  }
+  &__menu {
+    @include mq("desktop") {
+      position: absolute;
+      transform: translateY(-350%);
+    }
+    &.menu {
+      display: block;
+      transition: transform 0.3s;
+      transform: translateY(0);
+      width: 100%;
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   left: 0;
+      //   background: linear-gradient(
+      //     225deg,
+      //     #171a1c 0%,
+      //     rgba(94, 94, 87, 0.72) 100%
+      //   );
+      //   opacity: 0.4;
+      //   height: 100vh;
+      //   z-index: 0;
+      // }
+      .header__list {
+        flex-direction: column;
+        padding-top: 140px;
+        position: relative;
+        gap: 35px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          bottom: -33px;
+          border: 1px solid $white-color;
+        }
+      }
+    }
   }
   &__list {
     display: flex;
@@ -40,17 +82,29 @@
   &__info {
     @extend %ubuntu-700;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include mq("desktop") {
+      gap: 20px;
+    }
   }
   &__buy {
     color: $white-color;
     padding: 7px 28px;
     border-radius: 3px;
     border: 1px solid $white-color;
-    margin-right: 8px;
     cursor: pointer;
+    @include mq("phone") {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__tel {
     line-height: 18px;
+    @include mq("phone") {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +131,9 @@
   &__wrapper {
     display: flex;
     align-items: flex-end;
+    @include mq("phone") {
+      align-items: center;
+    }
   }
   .container {
     margin: 0 auto;
@@ -97,7 +154,13 @@
     margin-bottom: 25px;
     text-align: center;
     @include mq("desktop") {
-      font-size: 15px;
+      font-size: 80px;
+    }
+    @include mq("tablet") {
+      font-size: 65px;
+    }
+    @include mq("tablet") {
+      display: none;
     }
   }
   &__drone {
@@ -123,24 +186,50 @@
   position: relative;
   .section-title {
     margin-bottom: 55px;
+    @include mq("desktop") {
+      margin-bottom: 45px;
+    }
+    @include mq("tablet-2") {
+      margin-bottom: 37px;
+    }
   }
   &__box {
     display: flex;
     justify-content: space-between;
+    @include mq("tablet-2") {
+      display: block;
+    }
   }
   &__content {
     padding-left: 30px;
     max-width: 440px;
     width: 100%;
+    padding-right: 20px;
+    @include mq("tablet-2") {
+      max-width: 100%;
+    }
   }
   &__text:not(:last-of-type) {
     margin-bottom: 30px;
+    @include mq("desktop") {
+      margin-bottom: 25px;
+    }
   }
   &__slider-box {
     margin-top: 18%;
-    margin-right: 30px;
     position: relative;
     width: fit-content;
+    @include mq("tablet-2") {
+      margin-top: 8%;
+      position: absolute;
+      right: 0;
+    }
+    @include mq("tablet") {
+      margin-top: 5%;
+    }
+    @include mq("phone") {
+      display: none;
+    }
   }
   &__slider-text {
     @extend %ubuntu-500;
@@ -152,6 +241,12 @@
     z-index: 1;
     left: -253px;
     bottom: 59px;
+    @include mq("tablet-2") {
+      left: -179px;
+    }
+    @include mq("tablet") {
+      display: none;
+    }
   }
   &__slider {
     width: fit-content;

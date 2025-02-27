@@ -15,4 +15,8 @@ $(function() {
     scrollHorizontally: true,
     sectionSelector: '.page-section',
 });
+
+  $(".menu").on('click', function (){
+    $('.header__menu').toggleClass('menu')
+  })
 })
